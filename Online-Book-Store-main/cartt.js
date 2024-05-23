@@ -1,40 +1,46 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const addToCartButtons = document.querySelectorAll('.btn'); // Select all "dodaj u košaricu" buttons
-
-    const cart = []; // Array to store cart items
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
 
     addToCartButtons.forEach(button => {
-        button.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default form submission
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
 
-            const item = {
-                name: this.parentElement.querySelector('h3').innerText,
-                price: parseFloat(this.parentElement.querySelector('.price').innerText.replace('€', '')), // Extract price and convert to number
-                quantity: 1 // Default quantity
+            const parentBox = this.closest(".box");
+            const bookId = parentBox.getAttribute("data-book-id");
+            const bookTitle = parentBox.getAttribute("data-book-title");
+            const bookPrice = parentBox.getAttribute("data-book-price");
+            const bookImage = parentBox.getAttribute("data-book-image");
+
+            const cartItem = {
+                id: bookId,
+                title: bookTitle,
+                price: parseFloat(bookPrice),
+                image: bookImage,
+                quantity: 1
             };
 
-            addToCart(item); // Add item to cart
-            updateCartIcon(); // Update cart icon and count
+            addToCart(cartItem);
         });
     });
 
     function addToCart(item) {
-        const existingItem = cart.find(cartItem => cartItem.name === item.name);
+        let cartItems = localStorage.getItem("cartItems");
+        cartItems = cartItems ? JSON.parse(cartItems) : [];
 
-        if (existingItem) {
-            existingItem.quantity++; // If item already exists, increase quantity
+        // Check if the item already exists in the cart
+        const existingItemIndex = cartItems.findIndex(cartItem => cartItem.id === item.id);
+
+        if (existingItemIndex !== -1) {
+            // If item exists, increase its quantity
+            cartItems[existingItemIndex].quantity++;
         } else {
-            cart.push(item); // Otherwise, add new item to cart
+            // If item does not exist, add it to the cart
+            cartItems.push(item);
         }
-    }
 
-    function updateCartIcon() {
-        const cartIcon = document.querySelector('.fa-shopping-cart');
-        const cartCount = document.querySelector('.cart-count');
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-        if (cartIcon && cartCount) {
-            cartIcon.classList.add('cart-added'); // Add class to indicate item added to cart
-            cartCount.innerText = cart.length; // Update cart count
-        }
+        // Optional: You can update the UI to reflect that the item has been added to the cart
+        alert("Proizvod je dodan u košaricu!");
     }
 });

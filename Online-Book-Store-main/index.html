@@ -8,20 +8,21 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <!-- font awesome cdn link  -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- custom css file link  -->
+    
     <link rel="stylesheet" href="sytle.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 <link rel="manifest" href="favicon_io/site.webmanifest">
+<script src="cartt.js" defer></script>
 </head>
 <body>
 
-<!-- header section starts  -->
+
 
 <header class="header">
 
@@ -54,9 +55,7 @@
 
 </header>
 
-<!-- header section ends -->
 
-<!-- bottom navbar  -->
 
 <nav class="bottom-navbar">
     <a href="#home" class="fas fa-home"></a>
@@ -66,7 +65,7 @@
     <a href="#feedback" class="fas fa-feedback"></a>
 </nav>
 
-<!-- login form  -->
+
 
 <div class="login-form-container">
 
@@ -89,7 +88,7 @@
 
 </div>
 
-<!-- home section starts  -->
+
 
 <section class="home" id="home">
 
@@ -117,9 +116,6 @@
 
 </section>
 
-<!-- home section ense  -->
-
-<!-- icons section starts  -->
 
 <section class="icons-container">
 
@@ -157,9 +153,7 @@
 
 </section>
 
-<!-- icons section ends -->
 
-<!-- featured section starts  -->
 
 <section class="featured" id="featured">
 
@@ -169,37 +163,40 @@
 
         <div class="swiper-wrapper">
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="1" data-book-title="Mikrovalna elektronika" data-book-price="21.99" data-book-image="https://www.knjizara-dominovic.hr/upload/catalog/product/34738/thumb/436876_60cdc6d23e45a_420x610r.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                   <a href="./product.html"> <img src="https://www.knjizara-dominovic.hr/upload/catalog/product/34738/thumb/436876_60cdc6d23e45a_420x610r.jpg" alt=""> </a>
+                    <a href="./product.html">
+                        <img src="https://www.knjizara-dominovic.hr/upload/catalog/product/34738/thumb/436876_60cdc6d23e45a_420x610r.jpg" alt="">
+                    </a>
                 </div>
                 <div class="content">
                     <h3>Mikrovalna elektronika</h3>
-                    <div class="price">€21.99€ <span>€29.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <div class="price">€21.99 <span>€29.99</span></div>
+                    <a href="#" class="btn add-to-cart">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="2" data-book-title="Digitalni Sustavi" data-book-price="18.99" data-book-image="https://www.knjizara-dominovic.hr/upload/catalog/product/27829/thumb/433506_digitalni-sustavi_420x610r.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <a href="./product.html"> <img src="https://www.knjizara-dominovic.hr/upload/catalog/product/27829/thumb/433506_digitalni-sustavi_420x610r.jpg" alt=""> </a>
+                    <a href="./product.html"> 
+                        <img src="https://www.knjizara-dominovic.hr/upload/catalog/product/27829/thumb/433506_digitalni-sustavi_420x610r.jpg" alt=""> </a>
                 </div>
                 <div class="content">
                     <h3>Digitalni Sustavi</h3>
                     <div class="price">€18.99 <span>€23.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="3" data-book-title="Elementi strojeva" data-book-price="19.99" data-book-image="https://www.knjizara-dominovic.hr/upload/catalog/product/3872/thumb/309017_elementi-strojeva_420x610r.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
@@ -210,11 +207,13 @@
                 <div class="content">
                     <h3>elementi strojeva</h3>
                     <div class="price">€19.99 <span>€28.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+
+
+            <div class="swiper-slide box" data-book-id="4" data-book-title="Uvod u Graditeljstvo" data-book-price="18.99" data-book-image="https://www.knjizara-dominovic.hr/upload/catalog/product/23359/thumb/428118_5f5cab138e939_420x610r.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
@@ -225,11 +224,11 @@
                 <div class="content">
                     <h3>uvod u graditeljstvo</h3>
                     <div class="price">€18.99 <span>€25.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="5" data-book-title="Konstruiranje Mostova" data-book-price="22.99" data-book-image="https://www.knjizara-dominovic.hr/upload/catalog/product/15176/thumb/410117_konstruiranje-mostova_420x610r.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
@@ -240,11 +239,11 @@
                 <div class="content">
                     <h3>konstruiranje mostova</h3>
                     <div class="price">€22.99 <span>€30.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="6" data-book-title="Betonske Konstrukcije" data-book-price="27.99" data-book-image="https://www.knjizara-dominovic.hr/upload/catalog/product/11146/thumb/413847_betonske-konstrukcije-sv-3-gradenje_420x610r.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
@@ -255,11 +254,11 @@
                 <div class="content">
                     <h3>Betonske konstrukcije</h3>
                     <div class="price">€27.99 <span>€36.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="7" data-book-title="Osnove Elektrotehnike" data-book-price="35.99" data-book-image="https://element.hr/wp-content/uploads/2022/05/13685.png">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
@@ -270,11 +269,11 @@
                 <div class="content">
                     <h3>osnove elektrotehnike</h3>
                     <div class="price">€35.99 <span>€.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="8" data-book-title="Statika" data-book-price="18.99" data-book-image="https://www.knjizara-dominovic.hr/upload/catalog/product/8595/thumb/402676_statika_420x610r.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
@@ -285,11 +284,11 @@
                 <div class="content">
                     <h3>statika</h3>
                     <div class="price">€18.99 <span>€29.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="9" data-book-title="Elektronički sklopovi" data-book-price="37.99" data-book-image="https://www.knjizara-dominovic.hr/upload/catalog/product/8735/thumb/404571_639859b37aff4_420x610r.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
@@ -300,11 +299,11 @@
                 <div class="content">
                     <h3>Elektronički sklopovi</h3>
                     <div class="price">€37.99 <span>€54.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-book-id="10" data-book-title="Informacijski sustavi" data-book-price="34.99" data-book-image="https://shop.skolskaknjiga.hr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/3/030882.jpg">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-eye"></a>
@@ -315,7 +314,7 @@
                 <div class="content">
                     <h3>Informacijski sustavi</h3>
                     <div class="price">€34.99 <span>€.99</span></div>
-                    <a href="./cart.html" class="btn">dodaj u košaricu</a>
+                    <a href="#" class="btn">dodaj u košaricu</a>
                 </div>
             </div>
 
@@ -328,9 +327,7 @@
 
 </section>
 
-<!-- featured section ends -->
 
-<!-- newsletter section starts -->
 
 <section class="newsletter">
 
@@ -342,9 +339,6 @@
 
 </section>
 
-<!-- newsletter section ends -->
-
-<!-- category section starts  -->
 
 <section class="arrivals" id="arrivals">
 
@@ -440,9 +434,7 @@
 
 </section>
 
-<!-- category section ends -->
 
-<!-- deal section starts  -->
 
 <section class="deal">
 
@@ -459,9 +451,7 @@
 
 </section>
 
-<!-- deal section ends -->
 
-<!-- reviews section starts  -->
 
 <section class="reviews" id="reviews">
 
@@ -554,9 +544,7 @@
 
 </section>
 
-<!-- reviews section ends -->
 
-<!-- feedback section starts  -->
 
 <section class="blogs" id="blogs">
 
@@ -567,16 +555,13 @@
         <form action="">
             <h3>Vaše mišljenje nam puno vrijedi...</h3>
             <a href="./feedback.html" class="btn">Napiši</a>
-            <!-- <a href="./feedback.html"><input type="submit" value="feedback"> -->
             </a>
         </form>
 
     </section>
 </section>
 
-<!-- feedback section ends -->
 
-<!-- footer section starts  -->
 
 <section class="footer">
 
@@ -629,36 +614,13 @@
 
 </section>
 
-<!-- footer section ends -->
-
-<!-- loader  -->
 
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-<!-- custom js file link  -->
-<script src="script.js">
-    document.addEventListener('DOMContentLoaded', () => {
-            const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-            addToCartButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const product = button.parentElement;
-                    const productName = product.querySelector('h2').textContent;
-                    const productPrice = product.querySelector('p').textContent;
 
-                    // Stvori novu stavku u košarici
-                    const cartItem = document.createElement('li');
-                    cartItem.textContent = `${productName} - ${productPrice}`;
-
-                    // Dodaj stavku u košaricu
-                    const cart = document.querySelector('.cart-items');
-                    cart.appendChild(cartItem);
-                });
-            });
-        });
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
