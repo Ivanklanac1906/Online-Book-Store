@@ -1,46 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+// Dodavanje artikla u košaricu
+document.addEventListener('DOMContentLoaded', function() {
+    const cartButtons = document.querySelectorAll('.add-to-cart');
 
-    addToCartButtons.forEach(button => {
-        button.addEventListener("click", function(event) {
+    cartButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
             event.preventDefault();
+            const bookBox = button.closest('.box');
+            const bookId = bookBox.getAttribute('data-book-id');
+            const bookTitle = bookBox.getAttribute('data-book-title');
+            const bookPrice = bookBox.getAttribute('data-book-price');
+            const bookImage = bookBox.getAttribute('data-book-image');
 
-            const parentBox = this.closest(".box");
-            const bookId = parentBox.getAttribute("data-book-id");
-            const bookTitle = parentBox.getAttribute("data-book-title");
-            const bookPrice = parentBox.getAttribute("data-book-price");
-            const bookImage = parentBox.getAttribute("data-book-image");
-
-            const cartItem = {
-                id: bookId,
-                title: bookTitle,
-                price: parseFloat(bookPrice),
-                image: bookImage,
-                quantity: 1
-            };
-
-            addToCart(cartItem);
+            dodajUKosaricu(bookId, bookTitle, bookPrice, bookImage);
         });
     });
+});
 
-    function addToCart(item) {
-        let cartItems = localStorage.getItem("cartItems");
-        cartItems = cartItems ? JSON.parse(cartItems) : [];
+function dodajUKosaricu(id, title, price, image) {
+    let kosarica = JSON.parse(localStorage.getItem('kosarica')) || [];
+    kosarica.push({ id, title, price, image });
+    localStorage.setItem('kosarica', JSON.stringify(kosarica));
+    alert('Artikl dodan u košaricu');
+}
 
-        // Check if the item already exists in the cart
-        const existingItemIndex = cartItems.findIndex(cartItem => cartItem.id === item.id);
-
-        if (existingItemIndex !== -1) {
-            // If item exists, increase its quantity
-            cartItems[existingItemIndex].quantity++;
-        } else {
-            // If item does not exist, add it to the cart
-            cartItems.push(item);
-        }
-
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-        // Optional: You can update the UI to reflect that the item has been added to the cart
-        alert("Proizvod je dodan u košaricu!");
-    }
+// Inicijalizacija Swiper-a
+const swiper = new Swiper('.swiper-container', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // Ostale opcije prema potrebi
 });

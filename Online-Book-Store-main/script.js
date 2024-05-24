@@ -159,4 +159,30 @@ var swiper = new Swiper(".blogs-slider", {
   },
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Preuzimanje podataka iz URL parametara
+  const urlParams = new URLSearchParams(window.location.search);
+  const bookId = urlParams.get('id');
+  const bookTitle = urlParams.get('title');
+  const bookPrice = urlParams.get('price');
+  const bookImage = urlParams.get('image');
+
+  // Postavljanje podataka u elemente stranice
+  document.getElementById('book-image').src = bookImage;
+  document.getElementById('book-title').textContent = bookTitle;
+  document.getElementById('book-price').innerHTML = `Cijena: €<span>${bookPrice}</span>`;
+
+  // Postavljanje funkcionalnosti za dodavanje u košaricu
+  document.getElementById('add-to-cart').addEventListener('click', function() {
+      dodajUKosaricu(bookId, bookTitle, bookPrice, bookImage);
+  });
+});
+
+function dodajUKosaricu(id, title, price, image) {
+  let kosarica = JSON.parse(localStorage.getItem('kosarica')) || [];
+  kosarica.push({ id, title, price, image });
+  localStorage.setItem('kosarica', JSON.stringify(kosarica));
+  alert('Artikl dodan u košaricu');
+}
+
   
