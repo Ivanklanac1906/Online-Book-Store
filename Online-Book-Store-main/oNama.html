@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dodatni Materijal</title>
-    <link rel="stylesheet" href="materijal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="sytle.css">
 </head>
 <body>
 
@@ -13,16 +12,16 @@
 
         <div class="header-1">
     
-            <a href="#" class="logo"> <i class="fas fa-book"></i> Papirnati Svijet </a>
+            <a href="#" class="logo"> <i class="fas fa-book"></i> Papirnati Svijet   </a>
     
             <form action="" class="search-form">
-                <input type="search" name="" placeholder="potražite ovdje..." id="search-box">
+              
                 <label for="search-box" class="fas fa-search"></label>
             </form>
     
             <div class="icons">
                 <div id="search-btn" class="fas fa-search"></div>
-                <a href="./kos.html" class="fas fa-shopping-cart"></a>
+                <a href="./cart.html" class="fas fa-shopping-cart"></a>
                 <div id="login-btn" class="fas fa-user"></div>
             </div>
     
@@ -35,61 +34,71 @@
                 <a href="#">Kategorije</a>
                 <a href="#reviews">Ocjene</a>
                 <a href="./dodatni.html">Dodatni Materijal</a>
-                <a href="./oNama.html">O Nama</a>
             </nav>
         </div>
     
     </header>
-
-    <div class="login-form-container">
-
-        <div id="close-login-btn" class="fas fa-times"></div>
     
-        <form action="">
-            <h3>Prijava</h3>
-            <span>korisnicko ime</span>
-            <input type="email" name="" class="box" placeholder="unesite svoj e-mail" id="">
-            <span>zaporka</span>
-            <input type="password" name="" class="box" placeholder="unesite svoju zaporku" id="">
-            <div class="checkbox">
-                <input type="checkbox" name="" id="remember-me">
-                <label for="remember-me"> zapamti moje podatke</label>
+    <section class="about">
+        <h1>O Nama</h1>
+        <p style="font-weight: bold">
+          Najbolji u svome poslu
+          </p>
+        <div class="about-info">
+            <div class="about-img">
+                <img src=
+"https://static.vecteezy.com/system/resources/previews/006/552/415/non_2x/book-and-studen-logo-free-vector.jpg" alt="Geeksforgeeks">
             </div>
-            <input type="submit" value="sign in" class="btn">
-            <p>Zaboravili ste zaporku ? <a href="#">kliknite ovdje</a></p>
-            <p>Nemate račun ? <a href="#">Kreirajte ga ovdje</a></p>
-        </form>
-    
-
-        
-    </div>
-    <section class="home" id="home">
-        <div class="row">
-            <div class="content">
-                <h3>Dodatni materijali za studente</h3>
-                <p>Nudimo dodatne materijale za nase studente koji se bave elektrotehnikom, strojarstvom, građevinom ili bilo kojom tehničkom znanosti. Naši dodatni materijali su provjereni od strane fakulteta te naši klijenti koji su većinskim djelom studenti prolaze ispite bez ikakvih poteškoća.</p>
+            <div>
+            <p>Papirnati svijet je vodeća platforma za prodavanje knjiga koje koje se koriste na tehničkim fakultetima poput FER-a, FSB-a, PMF itd. Počeli smo kao mala firma u garaži do 18 kvadratnih metara te nakon godina rada i tisuće knjiga 
+                prodanih i više od 10000 zadovoljnih kupaca zajedno smo rasli. Posao koji radimo obavljamo s velikom ljubavlju i to je jedan od glavnih recepata zašto smo ovako uspješni.
+            </p>
+                <button>Pročitaj više</button>
             </div>
-
         </div>
-        
-        <div class="extra-material">
-            <h3>Elektrotehnika</h3>
-            <a href="https://osnove.tel.fer.hr/obavijesti/linkovi.htm?current_time=2352024225027">Osnove Elektrotehnike</a>
-        </div>
-
-        <div class="extra-material">
-            <h3>Strojarstvo</h3>
-            <a href="https://www.fsb.unizg.hr/index.php?fsbonline&skriptarnica" >Strojarstvo</a>
-        </div>
-
-        <div class="extra-material">
-            <h3>Građevina</h3>
-            <a href="https://www.grad.unizg.hr/">Građevina</a>
-        </div>
-
-
     </section>
-
+ 
+    <section class="team">
+        <h1>Naš tim</h1>
+        <div class="team-cards">
+           
+            <!-- Cards here -->
+            <!-- Card 1 -->
+           
+            <div class="card">
+                <div class="card-img">
+                    <img src=
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLblAdQfSG-G_ZYyJrSxH0CeLPGhYdFzXWlg&s" alt="User 1">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Ivan</h2>
+                    <p class="card-role">CEO i osnivač</p>
+                    <p class="card-email">iklanac1@ps.com</p>
+                    <p><button class="button">Kontakt</button></p>
+                </div>
+            </div>
+ 
+            <!-- Card 2 -->
+           
+            <div class="card">
+                <div class="card-img">
+                    <img src=
+"https://i.insider.com/5d2f876fb44ce746713e62ee?width=600&format=jpeg&auto=webp" alt="User 2">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Daniel</h2>
+                    <p class="card-role">Suosnivač</p>
+                    <p class="card-email">gospic145@ps.com</p>
+                    <p><button class="button">kontakt</button></p>
+                </div>
+            </div>
+           
+            <!-- Card 3 -->
+           
+            
+        </div>
+    </section>
+ 
 
 
     <section class="footer">
@@ -150,6 +159,6 @@
     
     
     <script src="script.js"></script>
-
+    
 </body>
 </html>
